@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'quid-pro-quo'`, () => {
+  it(`should have as title 'NoSQL Laboratory Work'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('quid-pro-quo');
+    expect(app.title).toEqual('NoSQL Laboratory Work');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('quid-pro-quo app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('nosqllab app is running!');
   });
 });

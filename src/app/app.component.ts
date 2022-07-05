@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { AuthorizationService } from './services/authorization.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'quid-pro-quo';
+export class AppComponent implements OnInit {
+
+  public title: string = 'Quid pro Quo';
+
+  constructor(public authorizationService: AuthorizationService) { }
+
+  ngOnInit(): void {
+    this.authorizationService.loginByLocalStorageData();
+    //this.authorizationService.startRegularLogin();
+  }
 }
